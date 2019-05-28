@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap 4 grid -->
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<!-- Reset -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Muller -->
+	<link rel="stylesheet" href="css/Muller.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<title>Like Opt</title>
+</head>
+<body>
+	
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-3">
+					<a href="index.html" class="header-logo">
+						<img src="img/main/logo.png" alt="Логотип">
+					</a>
+				</div>
+				<!-- /.col-md-auto -->
+				<div class="col-6 col-md-9">
+					<form action="#" class="header-search">
+						<input type="text" name="search" placeholder="Поиск по сайту" required>
+						<button class="button" type="button">
+							<i class="fa fa-search"></i>Поиск</button>
+					</form>
+				</div>
+				<!-- /.col-md-auto -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</header>
+	<!-- /.header -->
+
+	<div class="nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<div class="nav-cat">
+						<span class="nav-cat__title"><i class="fa fa-bars"></i>Каталог товаров</span>
+					</div>
+					<!-- /.cat -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-6">
+					<div class="nav-menu">
+						<a href="index.html" class="nav-menu__link" id="link1">Главная</a>
+						<a href="Category.html" class="nav-menu__link">Отдельная категория</a>
+						<a href="Promotions.html" class="nav-menu__link">Акции</a>
+						<a href="Contacts.html" class="nav-menu__link">Контакты</a>
+					</div>
+					<!-- /.nav-menu -->
+				</div>
+				<!-- /.col-md-7 -->
+				<div class="col-12 col-md-3">
+					<div class="nav-contacts">
+						<a href="[tel: 8 (800) 994-56-67]" class="nav-contacts__phone"><i class="fa fa-phone"></i>8 (800) 994-56-67</a>
+					</div>
+					<!-- /.nav-contacts -->
+				</div>
+				<!-- /.col-md-2 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.nav -->
+
+	<div class="mobnav display-none" id="mobnav">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="mobnav-title">
+						<i class="fa fa-bars"></i>
+						<span class="mobnav-prev"></span>
+						<span id="mobnav-text">Навигация сайта</span>
+						<span class="mobnav-close">&times;</span>
+					</div>
+					<!-- /.mobnav-title -->
+				</div>
+				<!-- /.col-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.mobnav -->
+
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="mobnav-menu display-none">
+					<div class="col-12">
+						<a href="index.html" class="mobnav-menu__link">Главная</a>
+						<a href="#" class="mobnav-menu__link" id="mobnav-linkcatalog"><i class="fas fa-bars"></i>
+       <span>Каталог товаров</span></a>
+						<a href="Promotions.html" class="mobnav-menu__link">Акции</a>
+						<a href="Contacts.html" class="mobnav-menu__link">Контакты</a>
+						<a href="tel: 8 (800) 994-56-67" class="mobnav-menu__link"><i class="fa fa-phone"></i>8 (800) 994-56-67</a>
+					</div>
+				</div>
+				<!-- /.mobnav-menu -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="mobnav-cat display-none">
+					<div class="col-12">
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Пасхальные формы</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Налобный фонарь</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Керамические ножи</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Кастрюли</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">				 
+							<span class="mobnav-cat__title">Сковороды</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+					</div>
+					<!-- /.mobnav-cat -->
+				</div>
+				<!-- /.col-12 -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-12 col-md-3 order-last order-md-first">
+					<div class="subcat">
+						<ul class="subcat-name">
+							<span class="subcat-title">Пасхальные формы</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Налобный фонарь</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Керамические ножи</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Кастрюли</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">				 
+							<span>Сковороды</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+					</div>
+					<!-- /.nav-subcat -->
+					<div class="news">
+						<div class="news-title">Новости</div>
+						<!-- /.news-title -->
+						<div class="news-block">
+							<a href="#"><img src="img/main/news/news1.png" alt="news1" class="news-block__img"></a>
+							<div class="news-block__date">13 июля 2018 г.</div>
+							<!-- /.news-block__date -->
+							<div class="news-block__text">Предположительный текст новости, который будет превликать своей ненавязчивостью</div>
+							<!-- /.news-block__text -->
+						</div>
+						<!-- /.news-block -->
+						<div class="news-block">
+							<a href="#"><img src="img/main/news/news2.png" alt="news2" class="news-block__img"></a>
+							<div class="news-block__date">13 июля 2018 г.</div>
+							<!-- /.news-block__date -->
+							<div class="news-block__text">Предположительный текст новости, который будет превликать своей ненавязчивостью</div>
+							<!-- /.news-block__text -->
+						</div>
+						<!-- /.news-block -->
+					</div>
+					<!-- /.news -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-9 order-first order-md-last">
+					<div class="main">
+						<div class="main-way"><span>Главная</span>   /   Результаты поиска</div>
+						<!-- /.main-way -->
+						<div class="main-mobile__way display-none"><a href="index.html">Главная</a></div>
+						<div class="main-title">По запросу <span>«сковорода»</span> найдено <span>16</span> товаров</div>
+						<div class="main-like main-search">
+							<div class="main-like__nav main-search__nav">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="main-like__navsort main-search__navsort">
+											<span>Сортировать по:</span>
+											<select name="sort" id="sort">
+												<option selected value="Цене">цене</option>
+												<option value="Цене">дате</option>
+											</select>
+										</div>
+										<!-- /.main-like__navsort -->
+									</div>
+									<!-- /.col-md-4 -->
+									<div class="col-md-4">
+										<div class="main-like__navcount main-search__navcount">
+											<span>Показывать по:</span>
+											<input type="radio" value="16" name="count" id="navcount16" checked><label for="navcount16">16</label>
+											<input type="radio" value="32" name="count" id="navcount32"><label for="navcount32">32</label>
+											<input type="radio" value="64" name="count" id="navcount64"><label for="navcount64">64</label>
+										</div>
+									</div>
+									<!-- /.col-md-4 -->
+									<div class="col-md-4">
+										<div class="main-like__navshow main-search__navshow">
+											<span>Формат отображения товара:</span>
+											<input id="showhoriz" type="radio" name="show" value="horizontal" checked><label for="showhoriz"><i class="fas fa-grip-horizontal"></i></label>
+											<input id="showvert" type="radio" name="show" value="vertical"><label for="showvert"><i class="fas fa-bars"></i></label>
+										</div>
+										<!-- /.main-like__show -->
+									</div>
+									<!-- /.col-md-4 -->
+								</div>
+								<!-- /.row -->
+							</div>
+							<!-- /.main-like__nav -->
+							<div class="main-like__products">
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod1.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod2.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod3.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod4.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod5.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod6.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+							</div>
+							<!-- /.main-like__products -->
+						</div>
+						<!-- /.main-like -->
+					</div>
+					<!-- /.main -->
+				</div>
+				<!-- /.col-md-auto -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.content -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<div class="footer-left">
+						<div class="footer-left__title">Будь первым</div>
+						<!-- /.footer-left__title -->
+						<div class="footer-left__subtitle">Подпишись на новинки<br> и специальные предложения</div>
+						<!-- /.footer-left__subtitle -->
+						<a href="#" class="footer-left__link">Политика конфиденциальности</a>
+						<div class="footer-left__copy">© «Like opt» 2018. Все права защищены.</div>
+						<!-- /.footer-left__copy -->
+					</div>
+					<!-- /.footer-left -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-6">
+					<form class="footer-center" action="#" method="post">
+						<input type="email" name="user_email" class="footer-center__input" placeholder="Адрес электронной почты" required>
+						<button type="submit" class="footer-center__btn" id="footer-submit">Подписаться</button>
+						<input type="checkbox" class="footer-center__check" id="check" required>
+						<label class="footer-center__label" for="check">Я согласен на обработку персональных данных,<br> а также с условиями подписки</label>
+					</form>
+					<!-- /.footer-center -->
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-12 col-md-3">
+					<div class="footer-right">
+						<a href="index.html" class="footer-right__logo">
+							<img src="img/main/footer-logo.png" alt="logo">
+						</a>
+						<div class="footer-right__title">Связаться с нами:</div>
+						<!-- /.footer-right__title -->
+						<a href="(909)" class="footer-right__phone" tel:="" 994-56-67="">+7 (909) 994-56-67</a>
+						<div class="footer-right__social">
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/youtube_active.svg" alt=""></a>
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/insta_active.svg" alt=""></a>
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/vk_active.svg" alt=""></a>
+						</div>
+						<!-- /.footer-right__social -->
+					</div>
+					<!-- /.footer-right -->
+					<div class="footer-mobile display-none">
+						<a href="#" class="footer-mobile__link">Политика конфиденциальности</a>
+						<div class="footer-mobile__copy">© «Like opt» 2018. Все права защищены.</div>
+						<!-- /.footer-mobile__copy -->
+					</div>
+					<!-- /.footer-mobile display-none -->
+				</div>
+				<!-- /.col-md-3 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- /.footer -->
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

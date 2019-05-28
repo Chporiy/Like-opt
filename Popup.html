@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ 
+	<!-- Bootstrap 4 grid -->
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<!-- Reset -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Muller -->
+	<link rel="stylesheet" href="css/Muller.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<title>Like Opt</title>
+</head>
+<body>
+	
+	<div class="popup">
+		<form action="send.php" method="post" class="popup-form">
+			<div class="popup-form__title">Заказать звонок</div>
+			<!-- /.popup-form__title -->
+			<input type="text"  name="user_name" class="popup-form__input" placeholder="Имя" required>
+			<input type="email" name="user_email" class="popup-form__input" placeholder="E-mail" required>
+			<input type="text"  name="user_phone" class="popup-form__input" id="popup-tel" placeholder="Телефон" required>
+			<div class="popup-form__policy">
+				<input type="checkbox" class="popup-form__check" id="popup-check" required>
+				<label for="popup-check">
+					Я согласен с законом о <a href="#">персональных данных</a> и <a href="#">политикой конфиденциальности</a>
+				</label>
+			</div>
+			<button class="popup-form__btn button-link" type="submit" id="popup-submit">Отправить</button>
+		</form>
+		<!-- /.popup-form -->
+	</div>
+	<!-- /.popup -->
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

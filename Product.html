@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<!-- Bootstrap 4 grid -->
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<!-- Reset -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Muller -->
+	<link rel="stylesheet" href="css/Muller.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<title>Like Opt</title>
+</head>
+<body>
+	
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-3">
+					<a href="index.html" class="header-logo">
+						<img src="img/main/logo.svg" alt="Логотип">
+					</a>
+				</div>
+				<!-- /.col-md-auto -->
+				<div class="col-6 col-md-9">
+					<form action="#" class="header-search">
+						<input type="text" name="search" placeholder="Поиск по сайту" required>
+						<button class="button" type="button">
+							<i class="fa fa-search"></i>Поиск</button>
+					</form>
+				</div>
+				<!-- /.col-md-auto -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</header>
+	<!-- /.header -->
+
+	<div class="nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<div class="nav-cat">
+						<span class="nav-cat__title"><i class="fa fa-bars"></i>Каталог товаров</span>
+					</div>
+					<!-- /.cat -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-6">
+					<div class="nav-menu">
+						<a href="index.html" class="nav-menu__link" id="link1">Главная</a>
+						<a href="Category.html" class="nav-menu__link">Отдельная категория</a>
+						<a href="Promotions.html" class="nav-menu__link">Акции</a>
+						<a href="Contacts.html" class="nav-menu__link">Контакты</a>
+					</div>
+					<!-- /.nav-menu -->
+				</div>
+				<!-- /.col-md-7 -->
+				<div class="col-12 col-md-3">
+					<div class="nav-contacts">
+						<a href="[tel: 8 (800) 994-56-67]" class="nav-contacts__phone"><i class="fa fa-phone"></i>8 (800) 994-56-67</a>
+					</div>
+					<!-- /.nav-contacts -->
+				</div>
+				<!-- /.col-md-2 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.nav -->
+
+	<div class="mobnav display-none" id="mobnav">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="mobnav-title">
+						<i class="fa fa-bars"></i>
+						<span class="mobnav-prev"></span>
+						<span id="mobnav-text">Навигация сайта</span>
+						<span class="mobnav-close">&times;</span>
+					</div>
+					<!-- /.mobnav-title -->
+				</div>
+				<!-- /.col-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.mobnav -->
+
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="mobnav-menu display-none">
+					<div class="col-12">
+						<a href="index.html" class="mobnav-menu__link">Главная</a>
+						<a href="#" class="mobnav-menu__link" id="mobnav-linkcatalog"><i class="fas fa-bars"></i>
+       <span>Каталог товаров</span></a>
+						<a href="Promotions.html" class="mobnav-menu__link">Акции</a>
+						<a href="Contacts.html" class="mobnav-menu__link">Контакты</a>
+						<a href="tel: 8 (800) 994-56-67" class="mobnav-menu__link"><i class="fa fa-phone"></i>8 (800) 994-56-67</a>
+					</div>
+				</div>
+				<!-- /.mobnav-menu -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="mobnav-cat display-none">
+					<div class="col-12">
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Пасхальные формы</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Налобный фонарь</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Керамические ножи</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">
+							<span class="mobnav-cat__title">Кастрюли</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+						<ul class="mobnav-cat__name">				 
+							<span class="mobnav-cat__title">Сковороды</span>
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.mobnav-cat__subname -->
+							<li class="mobnav-cat__subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.mobnav-cat__subname -->
+						</ul>
+						<!-- /.mobnav-cat__name -->
+					</div>
+					<!-- /.mobnav-cat -->
+				</div>
+				<!-- /.col-12 -->
+			</div>
+			<!-- /.row -->
+			<div class="row">
+				<div class="col-12 col-md-3 order-last order-md-first">
+					<div class="subcat">
+						<ul class="subcat-name">
+							<span class="subcat-title">Пасхальные формы</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Налобный фонарь</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Керамические ножи</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">
+							<span>Кастрюли</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+						<ul class="subcat-name">				 
+							<span>Сковороды</span>
+							<li class="subcat-subname"><a href="#">Кастрюли из нержавеющей стали</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли с каменным покрытием</a></li>
+							<!-- /.subcat-subname -->
+							<li class="subcat-subname"><a href="#">Кастрюли из чугуна</a></li>
+							<!-- /.subcat-subname -->
+						</ul>
+						<!-- /.subcat-name -->
+					</div>
+					<!-- /.nav-subcat -->
+					<div class="news">
+						<div class="news-title">Новости</div>
+						<!-- /.news-title -->
+						<div class="news-block">
+							<a href="#"><img src="img/main/news/news1.png" alt="news1" class="news-block__img"></a>
+							<div class="news-block__date">13 июля 2018 г.</div>
+							<!-- /.news-block__date -->
+							<div class="news-block__text">Предположительный текст новости, который будет превликать своей ненавязчивостью</div>
+							<!-- /.news-block__text -->
+						</div>
+						<!-- /.news-block -->
+						<div class="news-block">
+							<a href="#"><img src="img/main/news/news2.png" alt="news2" class="news-block__img"></a>
+							<div class="news-block__date">13 июля 2018 г.</div>
+							<!-- /.news-block__date -->
+							<div class="news-block__text">Предположительный текст новости, который будет превликать своей ненавязчивостью</div>
+							<!-- /.news-block__text -->
+						</div>
+						<!-- /.news-block -->
+					</div>
+					<!-- /.news -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-9 order-first order-md-last">
+					<div class="main">
+						<div class="main-way"><span>Главная   /   Каталог   /   Сковороды</span>   /   Сковорода «Летняя»</div>
+						<!-- /.main-way -->
+						<div class="main-mobile__way display-none"><a href="Category.html">Каталог</a></div>
+						<div class="main-title">Сковорода «Летняя»</div>
+						<!-- /.main-title -->
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="main-slider">
+									<div class="main-slider__top">
+										<img src="img/product/img1.png" alt="Большая картинка продукта">
+										<img src="img/product/img1.png" alt="Большая картинка продукта">
+										<img src="img/product/img1.png" alt="Большая картинка продукта">
+									</div>
+									<!-- /.main-slider__top -->
+									<div class="main-slider__bottom" >
+										<div class="main-slider__bottomoverlay">
+											<div class="main-slider__bottomblock" style="background-image: url(img/product/small-img1.png);"></div>
+										</div>
+										<div class="main-slider__bottomoverlay">
+											<div class="main-slider__bottomblock" style="background-image: url(img/product/small-img2.png);"></div>
+										</div>
+										<div class="main-slider__bottomoverlay">
+											<div class="main-slider__bottomblock" style="background-image: url(img/product/small-img3.png);"></div>
+										</div>
+										<!-- <div class="main-slider__bottomoverlay">
+											<div class="main-slider__bottomblock" style="background-image: url(img/product/small-img3.png);"></div>
+										</div> -->
+									</div>
+									<!-- /.main-slider__bottom -->	
+								</div>
+								<!-- /.main-slider -->
+								</div>
+							<!-- /.col-md-6 -->
+							<div class="col-12 col-md-6">
+								<div class="main-right">
+									<div class="main-right__block">
+										<div class="main-right__blockprice">31 200 руб.</div>
+										<!-- /.main-right__blockprice -->
+										<div class="main-right__blockcount">В наличии: 50 единиц товара</div>
+										<!-- /.main-right__blockcount -->
+										<a class="main-right__blockbtn button-link" href="Popup.html" target="_blank">Заказать</a>
+										<!-- /.main-right__btn button -->
+									</div>
+									<!-- /.main-right__block -->
+									<div class="main-right__colors">
+										<button class="main-right__color" id="color1" type="button" ></button>
+										<button class="main-right__color" id="color2" type="button" ></button>
+										<button class="main-right__color" id="color3" type="button" ></button>
+									</div>
+									<!-- /.main-right__colors -->
+									<div class="main-right__descr">
+										<div class="main-right__descrbrend">Бренд: <span>Brizoll</span></div>
+										<!-- /.main-right__descrbrend -->
+										<div class="main-right__descrsrock">Срок гарантии:	<span>1 год</span></div>
+										<!-- /.main-right__descrsrock -->
+										<div class="main-right__descrsize">Размеры ДхШхВ, см: <span>20x17x3</span></div>
+										<!-- /.main-right__descrsize -->
+										<div class="main-right__descrtype">Тип плит: <span>Для всех видов плит (+индукция)</span></div>
+										<!-- /.main-right__descrtype -->
+										<a href="#" class="main-right__descrall">Все характеристики</a>
+									</div>
+									<!-- /.main-right__descr -->
+								</div>
+								<!-- /.main-right -->
+							</div>
+							<!-- /.col-md-6 -->
+						</div>
+						<!-- /.row -->
+						<div class="main-tabs">
+							<div class="row">
+								<div class="col-md-auto">
+									<a href="#with" class="main-tabs__block button-link main-tabs__block_active" id="tab1" >С этим товаром покупают</a>
+								</div>
+								<!-- /.col-md-auto -->
+								<div class="col-md-auto">
+									<a href="#about" class="main-tabs__block button-link" id="tab2" >Описание</a>
+								</div>
+								<!-- /.col-md-auto -->
+								<div class="col-md-auto">
+									<a href="#feature" class="main-tabs__block button-link" id="tab3" >Характеристсики</a>
+								</div>
+								<!-- /.col-md-auto -->
+								<div class="col-md-auto">
+									<a href="#like" class="main-tabs__block button-link" id="tab4" >Похожие товары <span>23</span></a>
+								</div>
+								<!-- /.col-md-auto -->
+							</div>
+							<!-- /.row -->
+						</div>
+						<!-- /.main-tabs -->
+						<div class="main-with" id="with">
+							<div class="main-with__blocks">
+								<div class="main-with__block">
+									<div class="main-with__blockimg" style="background-image: url(img/product/other-prod1.png);"></div>
+									<!-- /.main-with__blockimg -->
+									<div class="main-with__blockdescr">
+										<div class="main-with__blockname">Перчатки не сгорайки</div>
+										<!-- /.main-with__blockname -->
+										<div class="main-with__blockprice">233 290 руб.</div>
+										<!-- /.main-with__blockprice -->
+										<a class="main-with__blockbtn button-link" href="#" target="_blank">Подробнее</a>
+									</div>
+								</div>
+								<!-- /.main-with__block -->									
+								<div class="main-with__block">
+									<div class="main-with__blockimg" style="background-image: url(img/product/other-prod2.png);"></div>
+									<!-- /.main-with__blockimg -->
+									<div class="main-with__blockdescr">
+										<div class="main-with__blockname">Бальзам для сковороды</div>
+										<!-- /.main-with__blockname -->
+										<div class="main-with__blockprice">2 290 руб.</div>
+										<!-- /.main-with__blockprice -->
+										<a class="main-with__blockbtn button-link" href="#" target="_blank">Подробнее</a>
+									</div>
+								</div>
+								<!-- /.main-with__block -->
+								<div class="main-with__block">
+									<div class="main-with__blockimg" style="background-image: url(img/product/other-prod3.png);"></div>
+									<!-- /.main-with__blockimg -->
+									<div class="main-with__blockdescr">
+										<div class="main-with__blockname">Защитная пленка для сковороды</div>
+										<!-- /.main-with__blockname -->
+										<div class="main-with__blockprice">90 290 руб.</div>
+										<!-- /.main-with__blockprice -->
+										<a class="main-with__blockbtn button-link" href="#" target="_blank">Подробнее</a>
+									</div>
+								</div>
+								<!-- /.main-with__block -->
+							</div>
+							<!-- /.main-with__blocks -->
+							<div class="counter"></div>
+						</div>
+						<!-- /.main-with -->
+						<div class="main-about" id="about">
+							<div class="main-about__name">Сковорода «Летняя»</div>
+							<!-- /.main-about__name -->
+							<div class="main-about__text">
+								<p>Сковорода выполнена из качественного алюминия с внутренним мраморным антипригарным покрытием.</p>
+								<p>Антипригарное покрытие жаропрочное, экологически чистое и полностью безопасное, без вредных соединений и примесей.</p>
+							</div>
+							<!-- /.main-about__text -->
+						</div>
+						<!-- /.main-about -->
+						<div class="main-feature" id="feature">
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Производитель</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Код товара <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>13714</span>
+									</p>
+									<p>Бренд <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Биол</span>
+									</p>
+									<p>Страна бренда <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Украина</span>
+									</p>
+									<p>Страна производства <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>  <span>Украина</span>
+									</p>
+									<p>Серия <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span>  <span>Чугун классик</span>
+									</p>
+									<p>Артикул <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>0122</span>
+									</p>
+								 <p>Срок гарантии, год <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>1</span>
+								 </p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Размер и вес</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Диаметр по стенкам, см <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>22</span>
+									</p>
+									<p>Диаметр дна, см <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>16.5</span>
+									</p>
+									<p>Толщина дна, мм <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>4</span>
+									</p>
+									<p>Высота стенки, см <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>4.5</span>
+									</p>
+									<p>Толщина стенок, мм <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>3.5</span>
+									</p>
+									<p>Вес (нетто), гр<span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>1680</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Тип плиты и использование</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Тип плит <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Для всех видов плит (+индукция)</span>
+									</p>
+									<p>Использование в духовке <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Да</span>
+									</p>
+									<p>Использ. металл.<br> предметов <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Да</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Комплектация</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Крышка в комплекте <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Нет</span>
+									</p>
+									<p>Тип упаковки <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Коробка</span>
+									</p>
+									<p>Количество ручек <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>2</span>
+									</p>
+									<p>Съемная ручка <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Да</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Покрытие</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Тип покрытия <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Без покрытия</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Основное</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Тип товара <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Сковорода</span></p>
+									<p>Тип сковороды <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Классическая</span></p>
+									<p>Наклон стенок <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Под углом</span></p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Цвет</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Цвет снаружи <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Зеленый</span>
+									</p>
+									<p>Цвет внутри <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Темный</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Материал</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Материал <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Чугун литой</span>
+									</p>
+									<p>Материал ручки <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Пластик</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Тип дна</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Дно <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>Стандартное</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+							<div class="main-feature__block">
+								<div class="main-feature__blockname">Дополнительно</div>
+								<!-- /.main-feature__blockname -->
+								<div class="main-feature__blockdescr">
+									<p>Код товара <span class="dots">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</span> <span>13714</span>
+									</p>
+								</div>
+								<!-- /.main-feature__blockdescr -->
+							</div>
+							<!-- /.main-feature__block -->
+						</div>
+						<!-- /.main-feature -->
+						<div class="main-like" id="like">
+							<div class="main-like__nav">
+								<div class="row">
+									<div class="col-12 col-md-4">
+										<div class="main-like__navsort">
+											<span>Сортировать по:</span>
+											<select name="sort" id="sort">
+												<option selected value="Цене">цене</option>
+												<option value="Цене">дате добавления</option>
+											</select>
+										</div>
+										<!-- /.main-like__navsort -->
+									</div>
+									<!-- /.col-md-4 -->
+									<div class="col-12 col-md-4">
+										<div class="main-like__navcount">
+											<span>Показывать по:</span>
+											<input type="radio" value="16" name="count" id="navcount16" checked><label for="navcount16">16</label>
+											<input type="radio" value="32" name="count" id="navcount32"><label for="navcount32">32</label>
+											<input type="radio" value="64" name="count" id="navcount64"><label for="navcount64">64</label>
+										</div>
+									</div>
+									<!-- /.col-md-4 -->
+									<div class="col-12 col-md-4">
+										<div class="main-like__navshow">
+											<span>Формат отображения товара:</span>
+											<input id="showhoriz" type="radio" name="show" value="horizontal" checked><label for="showhoriz"><i class="fas fa-grip-horizontal"></i></label>
+											<input id="showvert" type="radio" name="show" value="vertical"><label for="showvert"><i class="fas fa-bars"></i></label>
+										</div>
+										<!-- /.main-like__show -->
+									</div>
+									<!-- /.col-md-4 -->
+								</div>
+								<!-- /.row -->
+							</div>
+							<!-- /.main-like__nav -->
+							<div class="main-like__products">
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod1.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod2.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod3.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod4.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod5.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+								<div class="main-like__product">
+									<div class="main-like__productimg" style="background-image: url(img/like_product/prod6.png);"></div>
+									<!-- /.main-like__productimg -->
+									<div class="main-like__productdescr">
+										<div class="main-like__productname">Каменная сковорода</div>
+										<!-- /.main-like__productname -->
+										<div class="main-like__productprice">35 690 руб.</div>
+										<!-- /.main-like__productprice -->
+										<a class="main-like__productbtn button-link" href="#" target="_blank">Подробнее</a>
+										<!-- /.main-like__productbtn button-like -->
+									</div>
+									<!-- /.main-like__productdescr -->
+								</div>
+								<!-- /.main-like__product -->
+							</div>
+							<!-- /.main-like__products -->
+							<div class="counter1"></div>
+						</div>
+						<!-- /.main-like -->
+					</div>
+					<!-- /.main -->
+				</div>
+				<!-- /.col-md-auto -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.content -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<div class="footer-left">
+						<div class="footer-left__title">Будь первым</div>
+						<!-- /.footer-left__title -->
+						<div class="footer-left__subtitle">Подпишись на новинки<br> и специальные предложения</div>
+						<!-- /.footer-left__subtitle -->
+						<a href="#" class="footer-left__link">Политика конфиденциальности</a>
+						<div class="footer-left__copy">© «Like opt» 2018. Все права защищены.</div>
+						<!-- /.footer-left__copy -->
+					</div>
+					<!-- /.footer-left -->
+				</div>
+				<!-- /.col-md-3 -->
+				<div class="col-12 col-md-6">
+					<form class="footer-center" action="#" method="post">
+						<input type="email" name="user_email" class="footer-center__input" placeholder="Адрес электронной почты" required>
+						<button type="submit" class="footer-center__btn" id="footer-submit">Подписаться</button>
+						<input type="checkbox" class="footer-center__check" id="check" required>
+						<label class="footer-center__label" for="check">Я согласен на обработку персональных данных,<br> а также с условиями подписки</label>
+					</form>
+					<!-- /.footer-center -->
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-12 col-md-3">
+					<div class="footer-right">
+						<a href="index.html" class="footer-right__logo">
+							<img src="img/main/footer-logo.png" alt="logo">
+						</a>
+						<div class="footer-right__title">Связаться с нами:</div>
+						<!-- /.footer-right__title -->
+						<a href="(909)" class="footer-right__phone" tel:="" 994-56-67="">+7 (909) 994-56-67</a>
+						<div class="footer-right__social">
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/youtube_active.svg" alt=""></a>
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/insta_active.svg" alt=""></a>
+							<a href="#" class="footer-right__sociallink" target="_blank"><img src="img/main/social/vk_active.svg" alt=""></a>
+						</div>
+						<!-- /.footer-right__social -->
+					</div>
+					<!-- /.footer-right -->
+					<div class="footer-mobile display-none">
+						<a href="#" class="footer-mobile__link">Политика конфиденциальности</a>
+						<div class="footer-mobile__copy">© «Like opt» 2018. Все права защищены.</div>
+						<!-- /.footer-mobile__copy -->
+					</div>
+					<!-- /.footer-mobile display-none -->
+				</div>
+				<!-- /.col-md-3 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- /.footer -->
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

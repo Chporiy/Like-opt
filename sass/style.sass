@@ -1,0 +1,2351 @@
+$active_color: #2e2872
+$text_color_light: #fff
+$text_color_dark: #151c29
+$bg_color: #eeeeee
+$btn_color: #ff0035
+$product_hover_gradient: linear-gradient(45deg, $active_color, #493cd6)
+
+*
+	box-sizing: border-box
+
+body
+	font-family: "Muller Regular"
+	font-weight: 400
+	color: $text_color_dark
+	background-color: $bg_color
+a
+	text-decoration: none
+
+@keyframes activeDot
+	0% { transform: rotate(0deg); border-width: 1px 0px 0px 0px}
+	12.5% { border-width: 0px 0.5px 0px 0px}
+	25% { transform: rotate(90deg); border-width: 0px 1px 0px 0px}
+	37.5% { border-width: 0px 1px 0.5px 0px}
+	50% { transform: rotate(180deg); border-width: 0px 1px 1px 0px}
+	62.5% { border-width: 0px 1px 1px 0.5px}
+	75% { transform: rotate(270deg); border-width: 0px 1px 1px 1px}
+	87.5% { border-width: 0.5px 1px 1px 1px}
+	100% { transform: rotate(360deg); border-width: 1px 1px 1px 1px}
+
+.display-none
+	display: none
+
+.button
+	padding: 13px 13px
+	box-shadow: 0 8px 10px rgba(255, 0, 53, 0.2)
+	border: none
+	border-radius: 5px
+	background-color: $btn_color
+	font-family: "Muller Medium"
+	color: $text_color_light
+	font-size: 14px
+	line-height: 13px
+	&:hover
+		background-color: darken($btn_color, 2%)
+		box-shadow: none
+		cursor: pointer
+	&:focus
+		outline: none
+	&-link
+		padding: 12px 42px
+		border: none
+		border-radius: 5px
+		background-color: $active_color
+		color: $text_color_light
+		font-family: "Muller Medium"
+		font-size: 14px
+		font-weight: 400
+		line-height: 15px
+		box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+		&:hover
+			cursor: pointer
+			background-color: $text_color_light
+			color: $active_color
+			box-shadow: none
+		&:focus
+			outline: none
+
+.header
+	padding-top: 31px
+	padding-bottom: 23px
+	&-logo
+		img
+			width: 200px
+			height: 60px
+	&-search
+		position: relative
+		text-align: right
+		width: 100%
+		height: 60px
+		input
+			padding-left: 29px
+			display: inline-block
+			width: 100%
+			height: 100%
+			border: none
+			border-radius: 5px
+			background-color: #dddddd
+			color: #909295
+			font-family: "Muller Regular"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+			vertical-align: middle
+			z-index: 1
+			&:focus
+				outline: none
+		button
+			position: absolute
+			right: 15px
+			top: 50%
+			transform: translateY(-50%)
+			vertical-align: middle
+			display: inline-block
+			z-index: 2
+			i
+				margin-right: 13px
+.nav
+	width: 100%
+	height: 80px
+	background-color: $active_color
+	&-cat
+		width: 100%
+		i
+			margin-right: 26px
+		&__title
+			display: block
+			padding: 31px 29px
+			font-family: "Muller Medium"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+			color: $text_color_light
+			&:hover
+				cursor: pointer
+				background-color: #464182	
+	&-menu
+		padding-top: 34px
+		padding-bottom: 30px
+		&__link
+			position: relative
+			display: inline-block
+			padding: 0px 20px
+			font-size: 16px
+		 font-weight: 500
+		 line-height: 13px
+		 text-align: left
+		 color: $text_color_light
+		 &:after
+		 	content: ''
+		 	position: absolute
+		 	display: inline-block
+		 	width: 100%
+		 	height: 4px
+		 	left: 0px
+		 	bottom: -31px
+		 	background-color: $text_color_light
+		 	transform: scale(0)		 	
+		 	transition: 0.5s
+		 &:hover
+		 	&.nav-menu__link::after
+	 			transform: scale(1)
+	 #link1
+	 	padding: 0px 10px 0px 0px
+		 &:after
+		 	left: -10%
+		 	width: 110%
+	&-contacts
+		padding-top: 34px
+		padding-bottom: 30px
+		text-align: right
+		&__phone
+			display: inline-block
+			font-family: "Muller Bold"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+			color: $text_color_light
+			i
+				margin-left: 0px
+				margin-right: 12px
+				transform: rotateY(180deg)
+
+.content
+	padding-top: 30px
+	padding-bottom: 60px
+	position: relative
+.subcat
+	margin-top: -30px
+	margin-bottom: 30px
+	display: none
+	width: 100%
+	background: $text_color_light
+	border-radius: 0 0 5px 5px
+	&-name
+		display: block
+		margin: 1px auto
+		border-bottom: 1px solid darken(#eeeeee, 10%)
+		width: 90%
+	&-title
+		margin-left: 29px - 17px
+		display: inline-block
+		padding-top: 23px
+		padding-bottom: 23px
+		color: $text_color_dark
+		font-family: "Muller Medium"
+		font-size: 16px
+		font-weight: 400
+		line-height: 20px
+		vertical-align: middle
+		&__arrow
+			margin-left: 10px
+			display: inline-block
+			width: 10px
+			height: 5px
+			background: url(../img/main/arrow-down.png) center no-repeat
+			background-size: cover
+			vertical-align: middle
+			&_active
+				transform: rotate(180deg)
+		&:hover
+			cursor: pointer
+		&:last-child
+			border: none
+	&-subname
+		display: none
+		padding: 10px 0
+		margin-left: 29px - 17px
+		margin-bottom: 20px
+		a
+			color: darken(#eeeeee, 20%)
+			font-size: 14px
+			&:hover
+				color: $active_color
+		&_active
+			display: block
+.news
+	width: 100%
+	padding-top: 26px
+	padding-bottom: 2px
+	background-color: $text_color_light
+	border-radius: 5px 5px 0px 0px
+	&-title
+		margin-bottom: 26px
+		margin-left: 7px + 12px
+		color: #40434e
+		font-family: "Muller Bold"
+		font-size: 20px
+		font-weight: 400
+		line-height: 15px
+	&-block
+		margin-bottom: 39px
+		margin-left: 7px
+		&__img
+			display: block
+			margin: 0 auto
+			width: 90%
+		&__date
+			margin-left: 12px
+			margin-top: 20px
+			color: #909295
+			font-size: 14px
+			font-weight: 400
+			line-height: 20px
+		&__text
+			margin-left: 12px
+			margin-top: 20px
+			color: $text_color_dark
+			font-family: "Muller Medium"
+			font-size: 14px
+			font-weight: 400
+			line-height: 20px
+
+.main
+	.slider
+		max-width: 825px
+		width: 100%
+		&-block
+			padding: 41px 0px 41px 42px
+			background: url(../img/main/slider/slide.png) no-repeat center
+			background-size: cover
+			border-radius: 5px
+			&__title
+				color: $text_color_dark
+				font-family: "Muller Bold"
+				font-size: 36px
+				font-weight: 400
+				line-height: 40px
+			&__subtitle
+				margin-top: 21px
+				color: #909295
+				font-size: 14px
+				font-weight: 400
+				line-height: 22px
+			&__btn
+				margin-top: 33px
+				display: block				
+				width: 207px
+				height: 40px
+				box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+				border-radius: 5px
+				background-color: $active_color
+				text-align: center
+				&:hover
+					box-shadow: none
+		.slick-dots
+			bottom: 5px
+			li
+				button
+					&::before
+						content: ''
+						width: 8px
+						height: 8px
+						background-color: #fd7f98
+						border-radius: 50%
+						opacity: 0.75
+			.slick-active
+				button
+					position: relative
+					&::before
+						width: 4px
+						height: 4px
+						top: 2px
+						left: 2px
+						background-color: $text_color_light
+						
+					&::after
+						content: ''
+						position: absolute
+						top: -2px
+						left: -2px
+						display: inline-block
+						width: 12px
+						height: 12px
+						background-color: transparent
+						border: solid $text_color_light
+						border-width: 0px 0px 0px 0px
+						border-radius: 100%
+						animation: activeDot 2.5s linear forwards
+	&-title
+		margin-top: 34px
+		font-family: "Muller Bold"
+		font-size: 20px
+		font-weight: 400
+		line-height: 15px
+		color: $text_color_dark
+	&-products
+		margin-top: 29px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		max-width: 825px
+		width: 100%
+	&-product
+		position: relative
+		margin-bottom: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		width: 195px
+		height: 177px
+		background-color: $text_color_light
+		border-radius: 5px
+		text-align: center
+		&:hover
+			cursor: pointer
+			border: 2px solid #493cd6		
+		&__img
+			img
+				margin-top: 10px
+		&__count
+			margin-top: 28px
+		&__title
+			margin-top: 12px
+			font-family: "Muller Medium"
+			color: $text_color_dark
+			font-size: 14px
+			line-height: 22px
+	&-text
+		width: 775px
+		margin-top: 43px
+		color: $text_color_dark
+		font-size: 16px
+		line-height: 24px
+		p
+			margin-top: 23px
+		&__bold
+			font-family: "Muller Bold"
+			font-weight: 700
+			
+
+.footer
+	padding-top: 60px
+	padding-bottom: 52px
+	background-color: $active_color
+	&-left
+		&__title
+			color: $text_color_light
+			font-family: "Muller Bold"
+			font-size: 28px
+			font-weight: 400
+			line-height: 30px
+		&__subtitle
+			margin-top: 17px
+			color: $text_color_light
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+		&__link
+			display: block
+			color: $text_color_light
+			margin-top: 74px
+			font-size: 14px
+			line-height: 22px
+			text-decoration: underline
+			opacity: 0.6
+		&__copy
+			margin-top: 15px
+			opacity: 0.5
+			color: #fefefe
+			font-size: 12px
+			line-height: 18px
+	&-center
+		width: 510px
+		&__input
+			padding-left: 16px
+			width: 300px
+			height: 40px
+			border: none
+			border-radius: 5px
+			background-color: $text_color_light
+			color: #909295
+			font-family: "Muller Regular"
+			font-size: 14px
+			line-height: 24px
+		&__btn
+			padding: 12px 42px
+			margin-left: 15px
+			border-radius: 5px
+			border: 1px solid $text_color_light
+			background-color: transparent
+			color: $text_color_light
+			font-family: "Muller Medium"
+			font-size: 14px
+			font-weight: 400
+			line-height: 15px
+			box-shadow: none
+			&:hover
+				cursor: pointer
+				background-color: $text_color_light
+				color: $active_color
+			&:focus
+				outline: none
+		&__check
+			display: none
+			&:checked
+				&+label:before
+					width: 14px
+					height: 14px
+					background: url(../img/main/check.svg) right center no-repeat
+					background-size: contain
+		&__label
+			margin-top: 31px
+			display: inline-block
+			margin-left: 28px
+			color: $text_color_light
+			font-size: 14px
+			line-height: 22px
+			&:before
+				content: ''
+				position: absolute
+				top: 75px
+				left: 14px
+				display: inline-block
+				width: 14px
+				height: 14px
+				border-radius: 5px
+				border: 1px solid #d1d1d1
+			&:hover
+				cursor: pointer
+
+	&-right
+		text-align: right
+		&__logo
+			img
+				width: 170px	
+				height: 52px
+		&__title
+			margin-top: 29px
+			color: #fefefe
+			font-size: 16px
+			line-height: 13px
+		&__phone
+			display: block
+			margin-top: 19px
+			color: #fefefe
+			font-family: "Muller Bold"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+		&__social
+			margin-top: 34px
+			&link
+				margin-left: 20px
+				display: inline-block
+				img
+					width: 32px
+					height: 32px
+					opacity: 0.5
+					&:hover
+						opacity: 1
+
+// Страница "Акции"
+.main
+	&-way
+		color: #909295
+		font-size: 12px
+		font-weight: 400
+		line-height: 15px
+		a
+			color: #40434e
+	&-promotions
+		margin-top: 21px
+		display: flex
+	&-promotion
+		padding-bottom: 20px
+		margin-right: 6px
+		margin-bottom: 20px
+		width: 270px
+		border-radius: 5px
+		background-color: #ffffff
+		&__img
+			width: 100%
+		&__date
+			margin-top: 20px
+			margin-left: 20px
+			color: #909295
+			font-size: 12px
+			line-height: 18px
+		&__title
+			margin-top: 12px
+			margin-left: 20px
+			color: $text_color_dark
+			font-family: "Muller Bold"
+			font-size: 18px
+			font-weight: 400
+			line-height: 24px
+		&__subtitle
+			margin-top: 18px
+			margin-left: 20px
+			color: $text_color_dark
+			font-size: 14px
+			line-height: 18px
+		&__btn
+			margin-top: 29px
+			margin-left: 20px
+			padding: 13px 33px
+			width: 142px
+			display: block
+			&:hover
+				color: #ffffff
+				background-color: #2e2871
+				opacity: 0.1
+
+// Страница "Контакты" 
+
+.main
+	&-left
+		&__phone
+			position: relative
+			display: block
+			margin-top: 49px
+			color: $text_color_dark
+			font-family: "Muller Bold"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: -6px
+				display: inline-block
+				width: 147px
+				height: 2px
+				background-color: #ff0035
+		&__text
+			margin-top: 22px
+			font-size: 14px
+			line-height: 22px
+		&__social
+			margin-top: 29px
+		&__link
+			display: inline-block
+			margin-right: 20px
+			vertical-align: middle
+			transition: 0.5 all
+		#contact-link1
+			width: 34px
+			height: 25px
+			background: url(../img/contacts/youtube_active.svg) center no-repeat
+			background-size: cover
+			&:hover
+				background: url(../img/contacts/youtube.svg) center no-repeat
+				background-size: cover
+		#contact-link2
+			width: 32px
+			height: 32px
+			background: url(../img/contacts/insta_active.svg) center no-repeat
+			background-size: cover
+			&:hover
+				background: url(../img/contacts/insta.svg) center no-repeat
+				background-size: cover
+		#contact-link3
+			width: 32px
+			height: 19px
+			background: url(../img/contacts/vk_active.svg) center no-repeat
+			background-size: cover
+			&:hover
+				background: url(../img/contacts/vk.svg) center no-repeat
+				background-size: cover
+		&__form
+			margin-top: 50px
+			&title
+				margin-bottom: 29px
+				font-family: "Muller Medium"
+				font-size: 28px
+				font-weight: 400
+				line-height: 30px
+			&input
+				margin-bottom: 10px
+				padding-left: 17px
+				display: block
+				width: 340px
+				height: 40px
+				border: none
+				border-radius: 5px
+				background-color: #ffffff
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 14px
+				font-weight: 400
+				line-height: 24px
+			&ta
+				padding-top: 15px
+				padding-left: 17px
+				width: 340px
+				height: 120px
+				border: none
+				border-radius: 5px
+				background-color: #ffffff
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 14px
+				font-weight: 400
+				line-height: 24px
+			&check
+				position: relative
+				left: 1px
+				top: 19px
+				display: none
+				border-radius: 5px
+				&:checked
+					&+label:before
+						width: 14px
+						height: 14px
+						background: url(../img/main/check.svg) right center no-repeat
+						background-size: contain
+			&label
+			 margin-top: 19px
+				margin-left: 34px
+				display: inline-block
+				color: #909295
+				font-size: 12px
+				line-height: 18px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 0px
+					left: -28px
+					display: inline-block
+					width: 14px
+					height: 14px
+					border-radius: 5px
+					border: 1px solid #d1d1d1
+				a
+					color: $active_color
+			&btn
+				margin-top: 19px
+				display: block
+				border: none
+	&-right
+		margin-top: 29px
+
+// Страница "Карточка товара"
+
+.main
+	&-slider
+		margin-top: 19px
+		&__top
+			img
+				&:focus
+					outline: none
+		&__bottom
+			margin-top: 4px
+			&overlay
+				display: block
+				width: 130px
+				height: 95px
+				background-color: #dddddd
+				z-index: -1				
+				&:focus
+					outline: none
+			&block
+				position: relative
+				margin-right: 4px
+				width: 130px
+				height: 95px
+				border-radius: 5px
+				background: bottom no-repeat
+				background-size: contain
+				z-index: 2
+		.slick-current
+			&.main-slider__bottomoverlay
+				background-color: #151c29
+				opacity: 0.9
+	&-right
+		margin-top: 19px
+		&__block
+			padding: 20px 0px 20px 21px
+			width: 100%
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03)
+			border-radius: 5px
+			background-color: $text_color_light
+			&price
+				font-family: "Muller Bold"
+				font-size: 28px
+				font-weight: 400
+				line-height: 30px
+			&count
+				margin-top: 11px
+				color: #909295
+				font-family: "Muller Medium"
+				font-size: 12px
+				font-weight: 400
+				line-height: 12px
+			&btn
+				padding: 15px 33px
+				display: block
+				text-align: center
+				margin-top: 23px
+				width: 125px
+				&:hover
+					padding: 13px 31px
+					color: #909295
+					font-family: "Muller Medium"
+					font-size: 14px
+					font-weight: 400
+					border-radius: 5px
+					border: 2px solid #cccccc
+		&__colors
+			margin-top: 30px
+		&__color
+			position: relative
+			margin-right: 20px
+			display: inline-block
+			width: 32px
+			height: 32px
+			border: none
+			border-radius: 50%
+			&:before
+				content: ''
+				position: absolute
+				left: -4px
+				top: -4px
+				display: none
+				width: 40px
+				height: 40px
+				border: 2px solid #cccccc
+				border-radius: 50%
+			&:hover
+				cursor: pointer
+				&:before
+					display: block
+			&:focus
+				outline: none
+			&:active
+		#color1
+			background-color: #bbcc01
+			background-image: linear-gradient(30deg, #fffc00 0%, #d9ec00 100%)
+		#color2
+			background-color: #df1717
+			background-image: linear-gradient(30deg, #ff0048 0%, #d90253 100%)
+		#color3
+			background-color: #24d6dd
+			background-image: linear-gradient(30deg, #00ffde 0%, #02d6d9 100%)
+		&__descr
+			color: #909295
+			margin-top: 23px
+			font-family: "Muller Medium"
+			font-size: 14px
+			font-weight: 400
+			line-height: 22px
+			span
+				color: $text_color_dark
+			&all
+				margin-top: 7px
+				display: inline-block
+				color: #2e2872
+				text-decoration: underline
+	&-tabs
+		margin-top: 60px
+		&__block
+			padding: 12px 28.5px
+			color: #909295
+			font-size: 14px
+			background-color: transparent
+			border-radius: 5px
+			border: 2px solid #cccccc
+			box-shadow: none
+			&:hover
+				color: $text_color_light
+				box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+				border: 2px solid $active_color
+				border-radius: 5px
+				background-color: $active_color
+			&_active
+				color: $text_color_light
+				box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+				border: 2px solid $active_color
+				border-radius: 5px
+				background-color: $active_color
+	&-with
+		display: block
+		margin-top: 40px
+		&__blocks
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+		&__block
+			padding-bottom: 21px
+			margin-right: 13px
+			width: 266px
+			height: 100%
+			height: 295px
+			border-radius: 5px
+			background-color: $text_color_light
+			transition: 0.3s
+			&:nth-last-child(3n+1)
+				margin-right: 0px
+			&img
+				width: 266px
+				height: 184px
+				border-radius: 5px 5px 0 0
+			&name
+				margin-top: 18px
+				margin-left: 20px
+				font-size: 15px
+				line-height: 20px
+			&price
+				margin-top: 11px
+				margin-left: 20px
+				font-family: "Muller Bold"
+				font-size: 18px
+				font-weight: 400
+				line-height: 15px
+			&btn
+				margin-top: 19px
+				margin-left: 20px
+				display: none
+				color: #909295
+				font-size: 14px
+				background-color: transparent
+				border-radius: 5px
+				border: 2px solid #cccccc
+				box-shadow: none
+				transition: 0.001s all
+				&:hover
+					color: $text_color_light
+					box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+					border: 2px solid $active_color
+					border-radius: 5px
+					background-color: $active_color
+			&:hover
+				height: 326px
+				padding-bottom: 30px
+				.main-with__blockbtn
+					display: inline-block
+
+// Карточка товара "Описание"
+.main
+	&-about
+		display: none
+		&__name
+			margin-top: 40px
+			font-family: "Muller Medium"
+			font-size: 28px
+			font-weight: 400
+			line-height: 30px
+		&__text
+			margin-top: 32px
+			font-size: 16px
+			line-height: 24px
+			p
+				margin-top: 22px
+
+// Карточка товара "Характеристики"
+.main
+	&-feature
+		display: none
+		margin-top: 40px
+		&__block
+			margin-bottom: 56px
+			&name
+				margin-bottom: 33px
+				font-family: "Muller Medium"
+				font-size: 28px
+				font-weight: 400
+				line-height: 30px
+			&descr
+				font-size: 16px
+				line-height: 24px
+				p
+					margin-top: 15px
+
+// Карточка товара "Похожие"
+
+.main
+	&-like
+		display: none
+		margin-top: 29px
+		&__nav
+			font-size: 14px
+			line-height: 25px
+			button
+				background-color: transparent
+				border: none
+				color: #909295
+				font-size: 14px
+				line-height: 25px
+			&sort
+				select
+					position: relative
+					width: auto
+					background-color: transparent
+					border: none
+					color: #2e2872
+					&:focus
+						outline: none
+			&count, &show
+				text-align: right
+				input
+					display: none
+					&:checked
+						&+label
+							color: $active_color
+				label
+					margin-left: 9px
+					&:focus
+						outline: none
+					&:hover
+						cursor: pointer
+						color: $active_color
+		&__products
+			margin-top: 20px
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			width: 825px
+		&__product
+			margin-bottom: 6px
+			margin-right: 13px
+			padding-bottom: 21px
+			width: 266px
+			height: 100%
+			height: 295px
+			border-radius: 5px
+			background-color: $text_color_light
+			transition: 0.3s
+			&:nth-last-child(3n+1)
+				margin-right: 0px
+			&img
+				width: 266px
+				height: 184px
+				border-radius: 5px 5px 0 0
+				background: #dddddd center no-repeat
+			&name
+				margin-top: 18px
+				margin-left: 20px
+				font-size: 15px
+				line-height: 20px
+			&price
+				margin-top: 11px
+				margin-left: 20px
+				font-family: "Muller Bold"
+				font-size: 18px
+				font-weight: 400
+				line-height: 15px
+			&btn
+				margin-top: 19px
+				margin-left: 20px
+				display: none
+				color: #909295
+				font-size: 14px
+				background-color: transparent
+				border-radius: 5px
+				border: 2px solid #cccccc
+				box-shadow: none
+				transition: 0.001s all
+				&:hover
+					color: $text_color_light
+					box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+					border: 2px solid $active_color
+					border-radius: 5px
+					background-color: $active_color
+			&:hover
+				height: 295px + 30px
+				padding-bottom: 30px
+				.main-like__productbtn
+					display: inline-block
+
+// Страница "Категории"
+
+.main
+	&-choose
+		padding: 24px 0px 8px 22px
+		margin-top: 19px
+		width: 825px
+		border-radius: 5px
+		background-color: #ffffff
+		&__cols
+			display: flex
+		&__col
+			margin-right: 55px
+			display: flex
+			flex-direction: column
+		&__block
+			display: none
+			&:checked
+				&+label
+					font-family: "Muller Medium"
+					font-weight: 500
+					color: $active_color
+		label
+			display: inline-block
+			color: #909295
+			font-size: 14px
+			line-height: 22px
+			&:hover
+				cursor: pointer
+				color: $active_color
+		&__row
+			margin-top: 34px
+			button:nth-of-type(1)
+				color: $text_color_dark
+				&:active
+					color: $active_color			
+			span
+				font-size: 14px
+				line-height: 13px
+			label
+				position: relative
+				margin-left: 150px
+				margin-right: 50px
+				font-family: "Muller Regular"
+				color: $text_color_dark
+				font-size: 14px
+				line-height: 13px
+				vertical-align: middle
+				&:hover
+					color: $text_color_dark
+				&:before
+					content: ''
+					position: absolute
+					top: -1px
+					left: -28px
+					display: inline-block
+					width: 14px
+					height: 14px
+					border-radius: 5px
+					border: 1px solid #d1d1d1			
+					vertical-align: middle	
+		.range-bar 
+			margin-left: 25px
+	  width: 175px
+	  height: 3px
+	  border-radius: 2px
+	  display: inline-block
+	  background-color: #dadbdd
+	  position: relative
+	  font-family: "Muller Medium"
+	  font-size: 14px
+	  font-weight: 400
+	  line-height: 13px
+	  vertical-align: middle
+  .range-quantity
+  	background-color: #dadbdd
+  .range-min
+   position: absolute
+   top: -4px
+  	margin-left: -24px
+  .range-max
+	  position: absolute
+	  top: -4px
+  	margin-left: 175px + 12px
+  .range-handle
+  	display: inline-block
+   background-color: #fff
+   border-radius: 100%
+   cursor: move
+   width: 12px
+   height: 12px
+   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+   left: 0
+   top: -4px
+   position: absolute
+   &:before
+   	content: ''
+   	position: absolute
+   	display: inline-block
+   	top: 3px
+   	left: 3px	
+   	border-radius: 100%
+   	width: 6px
+   	height: 6px
+   	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.45)
+   	background-color: #e90038
+  &__ansclad
+  	margin-left: 100px
+  	display: none
+  	vertical-align: middle
+  	&:checked
+				&+label:before
+					width: 14px
+					height: 14px
+					background: url(../img/main/check.svg) right center no-repeat
+					background-size: contain
+  &__btn
+  	color: #909295
+  	background-color: transparent
+  	border: none
+  	font-size: 14px
+  	line-height: 13px
+  	&:hover
+  		cursor: pointer
+  	&:focus
+  		outline: none
+  	&:active
+				color: $active_color
+  &__total
+  	display: inline-block
+  	padding: 10px
+  	margin-top: 5px
+  	margin-left: 82px
+  	height: 25px
+  	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+  	background-color: #ffffff
+  	font-family: "Muller Medium"
+  	font-size: 14px
+  	font-weight: 400
+  	line-height: 13px
+  	text-align: center
+	&-category
+		display: none
+
+// Поп-ап
+
+.popup
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	&-form
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&__title
+			margin-bottom: 35px
+			font-family: "Muller Medium"
+			font-size: 28px
+			font-weight: 400
+			line-height: 30px
+		&__input
+			margin-top: 10px
+			padding: 17px
+			width: 340px
+			height: 40px
+			border: none
+			border-radius: 5px
+			background-color: #ffffff
+			color: #909295
+			font-size: 14px
+			line-height: 24px
+		&__policy
+			margin-top: 25px
+			display: flex
+			justify-content: space-between
+			width: 264px + 20px + 14px
+			font-size: 12px
+			line-height: 18px
+			color: #909295
+			label
+				margin-left: 14px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 0px
+					left: -28px
+					display: inline-block
+					width: 14px
+					height: 14px
+					border-radius: 5px
+					border: 1px solid #d1d1d1
+			a
+				color: $active_color
+		&__check
+			margin-right: 14px
+			display: none
+			&:checked
+				&+label:before
+					width: 14px
+					height: 14px
+					background: url(../img/main/check.svg) right center no-repeat
+					background-size: contain
+		&__btn
+			margin-top: 19px
+
+// Страница поиска
+.main
+	&-search
+		display: block
+
+// Конеретная страница акции
+
+.main
+	&-conc
+		margin-top: 21px
+		&::after
+			content: ''
+			display: table
+			clear: both
+		&__img
+			margin-left: 20px
+			width: 276px
+			height: 184px
+			background: center no-repeat
+			background-size: cover
+			float: right
+		&__text
+			margin-right: 10px
+			color: $text_color_dark
+			font-size: 14px
+			line-height: 18px
+		&__date
+			margin-top: 20px
+			color: #909295
+			text-align: right
+			font-size: 12px
+			line-height: 18px
+
+@media (max-width: 576px)
+	.display-none
+		display: block
+
+	.button
+		padding: 14px 27px
+		box-shadow: 0 8px 10px rgba(255, 0, 53, 0.2)
+		border: none
+		border-radius: 5px
+		background-color: $btn_color
+		font-family: "Muller Medium"
+		color: $text_color_light
+		font-size: 14px
+		line-height: 13px
+		&:hover
+			background-color: darken($btn_color, 2%)
+			box-shadow: none
+			cursor: pointer
+		&:focus
+			outline: none
+		&-link
+			padding: 12px 42px
+			border: none
+			border-radius: 5px
+			background-color: $active_color
+			color: $text_color_light
+			font-family: "Muller Medium"
+			font-size: 14px
+			font-weight: 400
+			line-height: 15px
+			box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+			&:hover
+				cursor: pointer
+				background-color: $text_color_light
+				color: $active_color
+				box-shadow: none
+			&:focus
+				outline: none
+	.header
+		padding-top: 29px
+		padding-bottom: 20px
+		&-logo
+			img
+				width: 130px
+				height: 39px
+		&-search
+			position: relative
+			text-align: right
+			width: 100%
+			height: 60px
+			input
+				padding-left: 29px
+				display: none
+				width: 100%
+				height: 100%
+				border: none
+				border-radius: 5px
+				background-color: #dddddd
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 16px
+				font-weight: 400
+				line-height: 13px
+				vertical-align: middle
+				z-index: 1
+				&:focus
+					outline: none
+			button
+				position: relative
+				right: 0px
+				top: -2px
+				transform: translateY(0%)
+				vertical-align: middle
+				display: inline-block
+				z-index: 2
+				i
+					margin-right: 13px
+	.nav
+		display: none
+	.mobnav
+		position: relative
+		width: 100%
+		height: 80px
+		background-color: $active_color
+		&_active
+			text-align: center
+			.mobnav-prev
+				position: absolute
+				left: 15px
+				top: 35px
+				display: none
+				background: url(../img/mobile/arrow-prev.png) center no-repeat
+				background-size: cover
+				width: 8px
+				height: 12px
+				vertical-align: middle
+			.mobnav-title
+				margin-top: 5px
+				vertical-align: middle
+				i
+					display: none
+			.mobnav-close
+				display: inline-block
+		&-close
+			position: absolute
+			top: 38px
+			right: 15px
+			display: none
+			width: 12px
+			height: 12px
+			font-size: 24px
+		&-title
+			display: block
+			padding: 31px 0px
+			width: auto
+			font-family: "Muller Medium"
+			font-size: 16px
+			font-weight: 400
+			line-height: 13px
+			color: $text_color_light
+			i
+				margin-right: 15px
+		&-menu
+			display: none
+			margin-top: -10px
+			margin-bottom: 30px
+			width: 100%
+			background-color: #ffffff
+			&__link
+				padding-top: 23px
+				padding-bottom: 23px
+				padding-left: 15px
+				display: block
+				color: $text_color_dark
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+				border-bottom: 1px solid #eeeeee
+				&:nth-child(2)
+					position: relative
+					i
+						margin-right: 10px
+					&:after
+						content: ""
+						position: absolute
+						right: 15px
+						top: 50%
+						transform: translateY(-50%)
+						display: inline-block
+						width: 5px
+						height: 10px
+						background: url(../img/mobile/arrow.png) center no-repeat
+						background-size: cover
+				&:last-child
+					font-family: "Muller Bold"
+					font-size: 16px
+					font-weight: 400
+					line-height: 13px
+					i
+						margin-left: 0px
+						margin-right: 12px
+						transform: rotateY(180deg)
+		&-cat
+			display: none
+			margin-top: -10px
+			margin-bottom: 30px
+			width: 100%
+			background: $text_color_light
+			&__name
+				display: block
+				margin: 1px auto
+				border-bottom: 1px solid darken(#eeeeee, 10%)
+				width: 100%
+				span
+					margin-left: 29px - 17px
+					display: inline-block
+					padding-top: 23px
+					padding-bottom: 23px
+					color: $text_color_dark
+					font-family: "Muller Medium"
+					font-size: 16px
+					font-weight: 400
+					line-height: 20px
+					vertical-align: middle
+					&:after
+						content: ''
+						margin-left: 10px
+						display: inline-block
+						width: 10px
+						height: 5px
+						background: url(../img/main/arrow-down.png) center no-repeat
+						vertical-align: middle
+				&:hover
+					.mobnav-cat__subname
+						display: block
+					.mobnav-cat__title:after
+					 	transform: rotate(180deg)
+				&:last-child
+					border: none
+			&__subname
+				display: none
+				padding: 10px 0
+				margin-left: 29px - 17px
+				margin-bottom: 20px
+				a
+					color: darken(#eeeeee, 20%)
+					font-size: 14px
+					&:hover
+						color: $active_color
+						font-family: "Muller Medium"
+						font-weight: 500
+	.news
+		margin-top: 27px
+		width: 100%
+		&-title
+			margin-bottom: 26px
+			margin-left: 0px + 12px
+			color: #40434e
+			font-family: "Muller Medium"
+			font-size: 24px
+			font-weight: 400
+			line-height: 15px
+		&-block
+			margin-bottom: 39px
+			margin-left: 0px
+			&__img
+				display: block
+				margin: 0 auto
+				width: 90%
+	.content
+		padding-top: 10px
+		padding-bottom: 0px
+		position: relative
+	.main
+		.slider
+			&-track
+				width: 100%
+			&-block
+				padding: 30px 0px 46px 15px
+				background: url(../img/mobile/slide.png) no-repeat center
+				background-size: cover
+				border-radius: 5px
+				&__title
+					width: 182px
+					color: $text_color_dark
+					font-family: "Muller Medium"
+					font-size: 24px
+					font-weight: 400
+					line-height: 30px
+					br
+						display: none
+				&__subtitle
+					margin-top: 11px
+					width: 174px
+					color: #909295
+					font-family: "Muller Regular"
+					font-size: 14px
+					font-weight: 400
+					line-height: 20px
+				&__btn
+					margin-top: 29px
+					display: block
+			.slick-dots
+				display: block
+				li
+					button
+						&::before
+							background-color: transparent
+				.slick-active
+					button
+						&::before
+							background-color: transparent
+			.slick-arrow
+				display: none
+		&-title
+			margin-top: 27px
+			font-family: "Muller Medium"
+			font-size: 24px
+			font-weight: 400
+			line-height: 15px
+			color: $text_color_dark
+		&-products
+			margin-top: 29px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			flex-wrap: nowrap
+		&-product
+			position: relative
+			margin-bottom: 10px
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: flex-start
+			width: 100%
+			height: 60px
+			background-color: $text_color_light
+			border-radius: 5px
+			text-align: center
+			&:hover
+				cursor: pointer
+				border: 2px solid #493cd6		
+			&__img
+				margin-left: 15px
+				max-width: 40px
+				width: 100%
+				order: -1
+				img
+					margin-top: 0
+					width: 80%
+					height: 80%
+			&__count
+				margin-top: 0px
+				width: 15px
+				text-align: center
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 14px
+				font-weight: 400
+				line-height: 15px
+				order: 1
+			&__title
+				margin-left: 32px
+				margin-top: 0px
+				font-family: "Muller Medium"
+				font-size: 14px
+				font-weight: 400
+				line-height: 22px
+				flex-basis: 60%
+				text-align: left
+		&-text
+			width: 100%
+			margin-top: 30px
+			font-family: "Muller Medium"
+			font-size: 14px
+			font-weight: 400
+			line-height: 22px
+			p
+				margin-top: 15px
+			&__bold
+				color: $active_color
+				font-family: "Muller Medium"
+				font-weight: 500
+	.footer
+		padding-top: 33px
+		padding-bottom: 32px
+		background-color: $active_color
+		&-left
+			&__title
+				font-family: "Muller Medium"
+				font-size: 24px
+				font-weight: 400
+				line-height: 30px
+			&__subtitle
+				margin-top: 17px
+				font-family: "Muller Regular"
+				font-size: 14px
+				font-weight: 400
+				line-height: 22px
+				br
+					display: none
+			&__link
+				display: none
+				color: $text_color_light
+				margin-top: 74px
+				font-size: 14px
+				line-height: 22px
+				text-decoration: underline
+				opacity: 0.6
+			&__copy
+				display: none
+				margin-top: 15px
+				opacity: 0.5
+				color: #fefefe
+				font-size: 12px
+				line-height: 18px
+		&-center
+			margin-top: 29px
+			width: 100%
+			&__input
+				padding-left: 16px
+				width: 100%
+			&__btn
+				margin-top: 10px
+				margin-left: 0px
+				width: 100%
+			&__label
+				position: relative
+				margin-top: 21px
+				margin-left: 30px
+				font-size: 12px
+				line-height: 18px
+				br
+					display: none
+				&:before
+					top: 0px
+					left: -30px
+		&-right
+			margin-top: 38px
+			text-align: left
+			&__logo
+				float: right
+				&:after
+					content: ''
+					display: table
+					clear: both
+				img
+					width: 130px
+					height: 40px
+			&__title
+				margin-top: 0px
+				font-size: 14px
+			&__phone
+				font-size: 14px
+				line-height: 13px
+			&__social
+				margin-top: 24px
+				&link
+					margin-left: 0px
+					margin-right: 19px
+		&-mobile
+			margin-top: 30px
+			&__link
+				display: block
+				color: $text_color_light
+				font-size: 14px
+				line-height: 22px
+				text-decoration: underline
+				opacity: 0.6
+			&__copy
+				display: block
+				margin-top: 15px
+				opacity: 0.5
+				color: #fefefe
+				font-size: 12px
+				font-weight: 400
+				line-height: 18px
+	// Страница "Акции"
+	.main
+		&-way
+			display: none
+		&-mobile__way
+			margin-top: 22px
+			font-family: "Muller Regular"
+			font-size: 12px
+			font-weight: 400
+			line-height: 15px
+			a
+				color: $text_color_dark
+				&:before
+					content: ''
+					display: inline-block
+					width: 5px
+					height: 10px
+					margin-right: 12px
+					background: url(../img/mobile/main_arrow_prev.png) center no-repeat
+					background-size: cover
+		&-promotions
+			margin-top: 22px
+			display: flex
+			flex-direction: column
+			align-items: center
+		&-promotion
+			margin-right: 0px
+			margin-bottom: 10px
+			width: 100%
+			&__date
+				margin-left: 15px
+			&__title
+				margin-left: 15px
+			&__subtitle
+				margin-left: 15px
+				width: 235px
+				font-family: "Muller Medium"
+			&__btn
+				margin-top: 29px
+	// Страница "Контакты" 
+	.main
+		&-left
+			&__phone
+				margin-top: 29px
+			&__text
+				margin-top: 22px
+				font-size: 14px
+				line-height: 22px
+				br
+					display: none
+			&__social
+				margin-top: 26px
+			&__form
+				margin-top: 30px
+				&title
+					margin-bottom: 30px
+					font-size: 24px
+				&input
+					padding-left: 13px
+					width: 100%
+				&ta
+					padding-left: 13px
+					width: 100%
+				&check
+					position: relative
+					left: 1px
+					top: 19px
+					display: none
+					border-radius: 5px
+					&:checked
+						&+label:before
+							width: 14px
+							height: 14px
+							background: url(../img/main/check.svg) right center no-repeat
+							background-size: contain
+				&label
+					margin-top: 20px
+					margin-left: 34px
+					br
+						display: none
+					a
+						color: #909295
+		&-right
+			margin-top: 28px
+			&__desctop
+				display: none
+			&__mobile
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+
+	// Страница "Карточка товара"
+	.main
+		&-slider
+			&__top
+				.slick-dots
+					bottom: -40px
+					li
+						button
+							&::before
+								content: ''
+								width: 14px
+								height: 14px
+								background-color: $active_color
+								border-radius: 50%
+								opacity: 1
+					.slick-active
+						button
+							&::before
+								background-color: transparent
+								border: 2px solid $active_color
+			&__bottom
+				display: none
+		&-right
+			margin-top: 19px
+			&__block
+				padding: 20px 15px 20px 15px
+				&btn
+					margin-top: 23px
+					width: 100%
+			&__colors
+				margin-top: 28px
+			&__descr
+				margin-top: 27px
+		&-tabs
+			margin-top: 20px
+			&__block
+				display: block
+				padding: 12px 28.5px
+				margin-bottom: 10px
+				color: #909295
+				width: 100%
+				font-size: 14px
+				text-align: center
+				background-color: transparent
+				border-radius: 5px
+				border: 2px solid #cccccc
+				box-shadow: none
+				span
+					color: $active_color
+				&:hover
+					color: $text_color_light
+					box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+					border: 2px solid $active_color
+					border-radius: 5px
+					background-color: $active_color
+				&_active
+					color: $text_color_light
+					box-shadow: 0 5px 10px rgba(46, 40, 113, 0.2)
+					border: 2px solid $active_color
+					border-radius: 5px
+					background-color: $active_color
+					span
+						color: $text_color_light
+		&-with
+			display: block
+			margin-top: 29px
+			.slick-list
+				width: 100%
+			.slick-initialized .slick-slide
+				display: flex
+				height: 161px
+			.slick-dots
+				display: none !important
+				bottom: -40px
+				width: 100%
+				height: 50px
+				background-color: $text_color_light
+				li
+					button
+						&::before
+							content: ''
+							margin-top: 25px - 14px
+							width: 14px
+							height: 14px
+							background-color: $active_color
+							border-radius: 50%
+							opacity: 1
+				.slick-active
+					button
+						&::before
+							background-color: transparent
+							border: 2px solid $active_color
+			.slick-arrow
+				z-index: 99
+			.slick-prev
+				position: absolute
+				top: 161px + 25px
+				left: 15px
+				&:before
+					content: ''
+					display: block
+					width: 5px
+					height: 10px
+					background: url(../img/mobile/main_arrow_prev.png) no-repeat center
+			.slick-next
+				position: absolute
+				top: 161px + 25px
+				right: 0px
+				&:before
+					content: ''
+					display: block
+					width: 5px
+					height: 10px
+					background: url(../img/mobile/mobile_arrow_next.png) no-repeat center
+			.counter
+				padding-top: 25px - 7.5px
+				position: relative
+				bottom: 40px
+				width: 100%
+				height: 50px
+				background-color: $text_color_light
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 15px
+				font-weight: 400
+				line-height: 15px
+				text-align: center
+			&__blocks
+				position: relative
+				display: flex
+				flex-direction: column
+				flex-wrap: nowrap
+				align-items: center
+			&__block
+			 display: flex
+				padding: 20px 0px 20px 10px
+				margin-right: 0px
+				margin-bottom: 10px
+				width: 100%
+				height: auto
+				border-bottom: 1px solid #eeeeee
+				border-radius: 0px
+				background-color: $text_color_light
+				transition: 0.3s
+				&:hover
+					height: 161px
+					padding-bottom: 20px
+					.main-with__blockbtn
+						display: block
+				&descr
+					width: 162px
+					height: 121px
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+				&img
+					width: 107px
+					height: 121px
+					border-radius: 5px
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+				&name
+					display: block
+					margin-top: 0px
+					margin-left: 12px
+					font-size: 14px
+					line-height: 22px
+				&price
+					display: block
+					margin-top: 0px
+					margin-left: 12px
+					font-family: "Muller Bold"
+					font-size: 18px
+					font-weight: 400
+					line-height: 15px
+				&btn
+					padding: 14px 33px
+					margin-top: 0px
+					margin-left: 12px
+					display: block
+					color: $text_color_light
+					font-size: 14px
+					text-align: center
+					background-color: $active_color
+					border-radius: 5px
+					border: none
+					box-shadow: none
+					transition: 0.001s all
+					&:hover
+						color: $text_color_light
+						box-shadow: none
+						border: none
+						border-radius: 5px
+						background-color: $active_color
+	// Карточка товара "Описание"
+	.main
+		&-about
+			display: none
+			&__name
+				margin-top: 20px
+				font-size: 24px
+			&__text
+				margin-top: 18px
+				font-size: 14px
+				line-height: 24px
+				p
+					margin-top: 15px
+	// Карточка товара "Характеристики"
+	.main
+		&-feature
+			display: none
+			margin-top: 20px
+			&__block
+				margin-bottom: 56px
+				&name
+					margin-bottom: 33px
+					font-family: "Muller Medium"
+					font-size: 20px
+					font-weight: 400
+					line-height: 26px
+				&descr
+					font-family: "Muller Regular"
+					font-size: 14px
+					font-weight: 400
+					line-height: 22px
+					.dots
+						display: none
+					p
+						display: flex
+						justify-content: space-between 
+						margin-top: 15px
+					span
+						width: 100px
+						margin-right: 0px
+						text-align: left
+	// Карточка товара "Похожие"
+	.main
+		&-like
+			display: none
+			margin-top: 29px
+			.slick-list
+				width: 100%
+			.slick-initialized .slick-slide
+				display: flex
+				height: 161px
+			.slick-dots
+				display: none !important
+				bottom: -40px
+				width: 100%
+				height: 50px
+				background-color: $text_color_light
+				li
+					button
+						&::before
+							content: ''
+							margin-top: 25px - 14px
+							width: 14px
+							height: 14px
+							background-color: $active_color
+							border-radius: 50%
+							opacity: 1
+				.slick-active
+					button
+						&::before
+							background-color: transparent
+							border: 2px solid $active_color
+			.slick-arrow
+				z-index: 99
+			.slick-prev
+				position: absolute
+				top: 161px + 25px
+				left: 15px
+				&:before
+					content: ''
+					display: block
+					width: 5px
+					height: 10px
+					background: url(../img/mobile/main_arrow_prev.png) no-repeat center
+			.slick-next
+				position: absolute
+				top: 161px + 25px
+				right: 0px
+				&:before
+					content: ''
+					display: block
+					width: 5px
+					height: 10px
+					background: url(../img/mobile/mobile_arrow_next.png) no-repeat center
+			.counter1
+				padding-top: 25px - 7.5px
+				position: relative
+				bottom: 40px
+				width: 100%
+				height: 50px
+				background-color: $text_color_light
+				color: #909295
+				font-family: "Muller Regular"
+				font-size: 15px
+				font-weight: 400
+				line-height: 15px
+				text-align: center
+			&__nav
+				display: none
+			&__products
+				margin-top: 20px
+				position: relative
+				display: flex
+				flex-direction: column
+				flex-wrap: nowrap
+				align-items: center
+				width: 100%
+			&__product
+				display: flex
+				padding: 20px 0px 20px 10px
+				margin-right: 0px
+				margin-bottom: 10px
+				width: 100%
+				height: auto
+				border-bottom: 1px solid #eeeeee
+				border-radius: 0px
+				background-color: $text_color_light
+				transition: 0.3s
+				&:hover
+					height: 161px
+					padding-bottom: 20px
+					.main-like__blockbtn
+						display: block
+				&descr
+					width: 162px
+					height: 121px
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+				&img
+					width: 107px
+					height: 121px
+					border-radius: 5px
+					background-position: center center
+					background-repeat: no-repeat
+					background-size: contain
+				&name
+					display: block
+					margin-top: 0px
+					margin-left: 12px
+					font-size: 14px
+					line-height: 22px
+				&price
+					display: block
+					margin-top: 0px
+					margin-left: 12px
+					font-family: "Muller Bold"
+					font-size: 18px
+					font-weight: 400
+					line-height: 15px
+				&btn
+					padding: 14px 33px
+					margin-top: 0px
+					margin-left: 12px
+					display: block
+					color: $text_color_light
+					font-size: 14px
+					text-align: center
+					background-color: $active_color
+					border-radius: 5px
+					border: none
+					box-shadow: none
+					transition: 0.001s all
+					&:hover
+						color: $text_color_light
+						box-shadow: none
+						border: none
+						border-radius: 5px
+						background-color: $active_color
+	// Страница "Категории"
+	.main
+		&-choose
+			padding: 0px
+			margin-top: 13px
+			width: 100%
+			border-radius: 5px
+			background-color: #ffffff
+			&__cols
+				display: flex
+				flex-direction: column
+				border-bottom: 1px solid #eeeeee
+				padding: 24px 5px 24px 2px
+			&__col
+				width: 100%
+				margin-right: 0px
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				justify-content: space-between
+			&__block
+				display: none
+				&:checked
+					&+label
+						font-family: "Muller Regular"
+						font-weight: 400
+						color: $text_color_light
+						background-color: $active_color
+			label
+				padding: 6px 2px
+				margin-bottom: 10px
+				display: inline-block
+				color: #909295
+				background-color: #eeeeee
+				border-radius: 5px
+				&:hover
+					cursor: pointer
+					color: $text_color_light
+				span
+					display: none
+			&__row
+				padding: 0px 5px 24px 5px
+				margin-top: 24px
+				button:nth-of-type(1)
+					color: $text_color_dark
+					&:active
+						color: $active_color			
+				span
+				label
+					position: relative
+					display: block
+					padding: 25px 0px
+					margin-top: 40px
+					margin-left: 25px
+					vertical-align: middle
+					background-color: transparent
+					&:hover
+						color: $text_color_dark
+					&:before
+						content: ''
+						position: absolute
+						top: 24px
+						left: -25px
+						display: inline-block
+						width: 14px
+						height: 14px
+						border-radius: 5px
+						border: 1px solid #d1d1d1
+			.range-bar 
+				margin-top: 28px
+				width: 65%
+				height: 3px
+				border-radius: 2px
+	   display: block
+	   position: relative
+	   vertical-align: middle
+	   border-bottom: 1px solid #eeeeee
+	  .range-min
+	  	margin-left: -24px
+	  .range-max
+	  	margin-left: 199px + 0px
+	  &__ansclad
+	  	margin-left: 0px
+	  	display: none
+	  	vertical-align: middle
+	  	&:checked
+					&+label:before
+						width: 14px
+						height: 14px
+						background: url(../img/main/check.svg) right center no-repeat
+						background-size: contain
+	  &__btn
+	  	margin-top: 20px
+	  	color: #909295
+	  	background-color: transparent
+	  	border: none
+	  	font-size: 14px
+	  	line-height: 13px
+	  	&:hover
+	  		cursor: pointer
+	  	&:focus
+	  		outline: none
+	  	&:active
+					color: $active_color
+	  &__total
+	  	position: absolute
+	  	display: inline-block
+	  	padding: 10px
+	  	margin-top: 0px
+	  	margin-left: 0px
+	  	left: 45px
+	  	bottom: 135px
+	  	height: 25px
+	  	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1)
+	  	background-color: #ffffff
+	  	font-family: "Muller Medium"
+	  	font-size: 14px
+	  	font-weight: 400
+	  	line-height: 13px
+	  	text-align: center
+		&-category
+			display: none
+			&__nav
+				font-size: 14px
+				line-height: 25px
+				margin-top: 19px
+				select
+					position: relative
+					width: auto
+					background-color: transparent
+					border: none
+					color: #2e2872
+					&:focus
+						outline: none
+				&filtr
+					padding: 0
+					display: inline-block
+					background-color: transparent
+					border: none
+					color: $text_color_dark
+					font-family: "Muller Regular"
+					font-size: 14px
+					font-weight: 400
+					line-height: 25px
+					&:focus
+						outline: none
+					&::after
+				&arrow
+					margin-left: 6px
+					display: inline-block
+				 background: url(../img/mobile/mobile_arrow_next.png) center no-repeat
+				 background-size: cover
+				 transform: rotateZ(90deg) translateX(1px)
+				 width: 5px
+				 height: 10px
+		&-text
+			display: none
+	// Поп-ап
+	.popup
+		&-form
+			&__input
+				width: 100%
+			&__policy
+				label
+				 width: 100%
+					margin-left: 28px
+					&:before
+						left: -28px
+	// Конеретная страница акции
+	.main
+		&-conc
+			margin-top: 21px
+			&::after
+				content: ''
+				display: table
+				clear: both
+			&__img
+				margin-left: auto
+				margin-right: auto
+				width: 290px
+				height: 184px
+				float: none
+			&__text
+				margin-top: 10px
+				margin-right: 0px
+	// Страница поиска
+	.main
+		&-title
+		 line-height: 28px
+		&-search
+			display: block
+			&__nav
+			 display: block
+			 &count, &show
+			 	display: none
